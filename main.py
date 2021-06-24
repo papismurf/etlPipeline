@@ -74,7 +74,7 @@ def upload_to_sql(filenames, db_name, debug=False):
         dat = factor_dataframe(dat, filename)
 
         # write records to sql database
-        if i == 0: # if first entry and table name already exist, replace
+        if i == 0:  # if first entry and table name already exist, replace
             dat.to_sql(db_name, con=conn, index=False, if_exists='append')
 
 
